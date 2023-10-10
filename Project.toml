@@ -1,0 +1,4 @@
+name = "MyStatsPackage"
+uuid = "c028111a-ec11-46e0-b59b-cc4953454d5e"
+authors = ["jschepers <judith.schepers@vis.uni-stuttgart.de>"]
+version = "0.1.0"
