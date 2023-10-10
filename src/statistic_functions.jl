@@ -7,16 +7,16 @@ function rse_sum(myrange)
 end
 
 function rse_mean(myrange)
-    return rse_sum(myrange)/length(myrange)
+    return rse_sum(myrange) / length(myrange)
 end
 
 function rse_std(myrange)
     myvector = collect(myrange)
-    return sqrt(sum((myvector .- rse_mean(myrange)).^2)/(length(myrange)-1))
+    return sqrt(sum((myvector .- rse_mean(myrange)) .^ 2) / (length(myrange) - 1))
 end
 
-function rse_tstat(myrange;σ=rse_std(myrange))
-    return rse_mean(myrange)/(σ/sqrt(length(myrange)))
+function rse_tstat(myrange; σ=rse_std(myrange))
+    return rse_mean(myrange) / (σ / sqrt(length(myrange)))
 end
 
 struct StatResult
@@ -31,7 +31,7 @@ function StatResult(myrange)
     n = length(x)
     std = rse_std(x)
     tvalue = rse_tstat(x)
-    StatResult(x,n,std,tvalue)
+    StatResult(x, n, std, tvalue)
 end
 
 import Base: length
