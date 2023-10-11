@@ -1,3 +1,26 @@
+
+"""
+    rse_sum(myrange::UnitRange{Int64})
+
+Return the sum of the elements of a given range.
+
+# Arguments
+
+- `myrange` -- range
+
+# Output
+
+A real number representing the sum of the range.
+
+# Examples
+
+```julia-repl
+julia> rse_sum(1:5)
+15
+\```
+
+See also [`rse_mean`](@ref), [`rse_std`](@ref)
+"""
 function rse_sum(myrange)
     res = 0
     for i in myrange
